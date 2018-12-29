@@ -6,8 +6,8 @@
 using namespace std;
 struct student { // structure for the data of the students in the binary file
     int fn;
-    char name[128]; // the size if smaller than the constraint because the binary file was too large for moodle with size of 257
-    char family_name[128]; // the size if smaller than the constraint because the binary file was too large for moodle with size of 257
+    char name[257];
+    char family_name[257];
     int grade;
 };
 struct ind { // structure for the index file containing the faculty number and position in the original file
@@ -101,7 +101,7 @@ int main () {
                     }
                 }
         }
-    file.close(); index.close(); // we close the files because we finished the work with it
+    file.close(); index.close(); // we close the files because we finished the work with them
     cout << endl ;
     return 0;
 }
